@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var array = ["I can create a tableView","Wow I'm doing it","I dont need this guy's help anymore","StepByStep is actually awesome my BAD"]
+    var array = ["I can create a tableView","Wow I'm doing it","I dont need this guy's help anymore"]
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,7 +26,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
         
         cell.textLabel?.text = array[indexPath.row]
         
